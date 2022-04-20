@@ -68,6 +68,9 @@ ament_export_targets(${PROJECT_NAME})
 
 ament_export_dependencies("rcl" "rcpputils" "rosidl_default_runtime" "statistics_msgs")
 
+message("OPENSSL_ROOT_DIR:" $ENV{OPENSSL_ROOT_DIR})
+message("OPENSSL_INCLUDE_DIR:" $ENV{OPENSSL_INCLUDE_DIR})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   find_package(ament_cmake_gtest REQUIRED)
